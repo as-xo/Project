@@ -7,12 +7,21 @@ const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite = $AnimatedSprite2D
+#@onready var actionable_finder = $Direction/ActionableFinder
+
 
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+#func _unhandled_input(_event: InputEvent) -> void:
+	#if Input.is_action_just_pressed("ui_accept"):
+		#var actionables = actionable_finder.get_overlapping_areas()
+		#if actionables.size() > 0:
+			#actionables[0].action()
+			#return
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
