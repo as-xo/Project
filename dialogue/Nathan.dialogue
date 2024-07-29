@@ -1,0 +1,14 @@
+~ start
+
+Nathan: [[Hi|Hello]], Lets learn about Arrays!
+Nathan: Here are some choices.
+- Array Basics
+	Nathan: Arrays are pretty useful structures.Lets learn some important things about them.
+- Binary Search Implementation
+	Nathan: This is the implementation of Binary Search in Python.
+- Time Complexity
+	Nathan: Time complexity of Binary Search is O log N. This is because the search space is halved with each iteration!	
+- Start again => start
+- End the conversation => END
+
+=> END

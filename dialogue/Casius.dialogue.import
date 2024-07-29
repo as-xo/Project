@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://b204hja08kqr0"
+path="res://.godot/imported/Casius.dialogue-e70604de418f6c332d41f2f231eb8310.tres"
+
+[deps]
+
+source_file="res://dialogue/Casius.dialogue"
+dest_files=["res://.godot/imported/Casius.dialogue-e70604de418f6c332d41f2f231eb8310.tres"]
+
+[params]
+
+defaults=true
