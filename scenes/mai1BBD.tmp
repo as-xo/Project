@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhmqm0du8r1xs"]
+[gd_scene load_steps=7 format=3 uid="uid://dhmqm0du8r1xs"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_a31l5"]
 [ext_resource type="TileSet" uid="uid://dy3cm8almm6ka" path="res://maps/main.tres" id="2_vxtbe"]
 [ext_resource type="PackedScene" uid="uid://wdixlprn7kon" path="res://scenes/Player.tscn" id="3_upshi"]
 [ext_resource type="PackedScene" uid="uid://bay3ctjeyakve" path="res://scenes/Nathan.tscn" id="4_fkbe0"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://tou2dsoebicu" path="res://scenes/door.tscn" id="6_d7xsw"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_a31l5")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-112, 416)
@@ -40,12 +42,4 @@ polygon = PackedVector2Array(-512, -128, -584, -128, -584, 0, -512, 0, -512, 240
 
 [node name="Doors" type="Node" parent="."]
 
-[node name="door_A" parent="Doors" instance=ExtResource("6_d7xsw")]
-position = Vector2(-48, -304)
-destination_level_tag = "arrays_level"
-destination_door_tag = "E"
-
-[node name="spawn" parent="Doors/door_A" index="1"]
-position = Vector2(32, 80)
-
-[editable path="Doors/door_A"]
+[node name="door" parent="Doors" instance=ExtResource("6_d7xsw")]

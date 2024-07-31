@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs8b5tso3wn5r"]
+[gd_scene load_steps=9 format=3 uid="uid://bs8b5tso3wn5r"]
 
 [ext_resource type="Texture2D" uid="uid://dqd85jwpgtek2" path="res://assets/tileset x2.png" id="1_nm0b8"]
+[ext_resource type="Script" path="res://scripts/arrays_level.gd" id="1_rci4g"]
 [ext_resource type="Texture2D" uid="uid://cpiip12weqir8" path="res://assets/Props and Items/props and items x2.png" id="2_3k7dy"]
+[ext_resource type="PackedScene" uid="uid://tou2dsoebicu" path="res://scenes/door.tscn" id="3_34ds7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ulxbi"]
 texture = ExtResource("1_nm0b8")
@@ -11904,6 +11906,7 @@ sources/1 = SubResource("TileSetAtlasSource_7ip1n")
 [sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_fpo3h"]
 
 [node name="Arrays Level" type="Node2D"]
+script = ExtResource("1_rci4g")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_kh154")
@@ -11927,3 +11930,19 @@ syntax_highlighter = SubResource("SyntaxHighlighter_fpo3h")
 highlight_current_line = true
 line_folding = true
 code_completion_enabled = true
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="door_E" parent="Doors" instance=ExtResource("3_34ds7")]
+position = Vector2(-32, 336)
+destination_level_tag = "lobby"
+destination_door_tag = "A"
+spawn_direction = "down"
+
+[node name="spawn" parent="Doors/door_E" index="1"]
+position = Vector2(32, -96)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 64)
+
+[editable path="Doors/door_E"]

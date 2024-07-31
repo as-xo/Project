@@ -1,10 +1,19 @@
 extends CharacterBody2D
 
+class_name Player
+
 const speed = 130.0
 const JUMP_VELOCITY = -300.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 var player_state
+
+func _ready():
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+func _on_spawn(position: Vector2, direction: String):
+	global_position = position
+	animated_sprite.play(player_movement(direction))	
 
 func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -28,27 +37,8 @@ func player_movement(dir):
 		elif dir.x > 0:
 			animated_sprite.flip_h = false
 	
-	
-	#if Input.is_action_just_pressed("move_left"):
-		#velocity.x = -speed
-		#velocity.y = 0
-	#elif  Input.is_action_just_pressed("move_right"):
-		#velocity.x = speed
-		#velocity.y = 0
-	#elif Input.is_action_just_pressed("move_down"):
-		#velocity.y = speed
-		#velocity.x = 0		
-	#elif Input.is_action_just_pressed("move_up"):
-		#velocity.y = -speed
-		#velocity.x = 0
-	#elif Input.is_action_just_pressed("jump"):
-		#velocity.y = JUMP_VELOCITY
-	#else:
-		#velocity.x = 0
-		#velocity.y = 0	
-		#
-		#
-	#move_and_slide()	
+func player():
+	pass
 	
 
 ##@onready var actionable_finder = $Direction/ActionableFinder
