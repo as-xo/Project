@@ -21,7 +21,8 @@ func _physics_process(_delta):
 	if direction.x == 0 and direction.y == 0:
 		player_state = "idle"
 	else:
-		player_state = "run"	
+		player_state = "run"
+		
 		
 	velocity = direction * speed		
 	move_and_slide()	

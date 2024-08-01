@@ -11935,7 +11935,7 @@ code_completion_enabled = true
 
 [node name="door_E" parent="Doors" instance=ExtResource("3_34ds7")]
 position = Vector2(-32, 336)
-destination_level_tag = "lobby"
+destination_level_tag = "main"
 destination_door_tag = "A"
 spawn_direction = "down"
 
@@ -11943,6 +11943,6 @@ spawn_direction = "down"
 position = Vector2(32, -96)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 64)
+position = Vector2(0, 72)
 
 [editable path="Doors/door_E"]
