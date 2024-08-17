@@ -1,13 +1,24 @@
 ~ start
 
 Nathan: [[Hi|Hello]], Lets learn about Arrays!
+Nathan: I will tell you some information but remember, if you get stuck there are a lot of resources on the web that go into further detail!
 Nathan: Here are some choices.
-- Array Basics
-	Nathan: Arrays are pretty useful structures.Lets learn some important things about them.
-- Binary Search Implementation
-	Nathan: This is the implementation of Binary Search in Python.
+~ choices
+- What are Arrays?
+	Nathan: Arrays are data structures that hold multiple values and are stored in contigious memory locations.\n Arrays use zero based indexing meaning the count starts at 0 instead of 1. They typically contain the same data type but not always.This can depend on the programming language syntax(p.s. look up Dynamic,Static, Strong and Fixed Typing). 
+	Nathan: Lets get back on track!\nHere is an example: my_array = [13,4,7,15,10].\nWhat is the element at index[2]?
+	If you said 7 you're correct! This is because for the array [13,4,7,15,10], indexing would work like this; \n my_array[0] = 13, my_array[1] = 4 and my_array[2] = 7 
+	...okay, I think you get the picture.
+	- Back to options => choices	
+- What are they used for?
+	Nathan: I'm glad you asked! \n Arrays are useful for storing, implementing other data structures
+	- Back to options => choices
+- Array Operations
+	Nathan: This is the implementation of Binary Search in Python.	
+	- Back to options => choices
 - Time Complexity
-	Nathan: Time complexity of Binary Search is O log N. This is because the search space is halved with each iteration!	
+	Nathan: Time complexity of Binary Search is O log N. This is because the search space is halved with each iteration!
+	- Back to options => choices	
 - Start again => start
 - End the conversation => END
 
