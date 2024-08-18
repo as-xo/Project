@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwnj3g5jblj01"]
+[gd_scene load_steps=13 format=3 uid="uid://dwnj3g5jblj01"]
 
 [ext_resource type="Script" path="res://scripts/oleum.gd" id="1_gp5wv"]
 [ext_resource type="Texture2D" uid="uid://dghc7mednbg5b" path="res://assets/No Outlines/npc x2.png" id="1_m0gcp"]
@@ -67,6 +67,9 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gerhd"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_pcjnx"]
+font_size = 12
+
 [node name="Oleum" type="CharacterBody2D"]
 script = ExtResource("1_gp5wv")
 
@@ -76,3 +79,12 @@ animation = &"talk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gerhd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -8.0
+offset_top = 40.0
+offset_right = 185.0
+offset_bottom = 63.0
+text = "Press O to talk to Oleum!
+"
+label_settings = SubResource("LabelSettings_pcjnx")

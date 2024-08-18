@@ -16,5 +16,5 @@ Oleum: [[Hi|Hello|Howdy]], let's look at some psuedocode.\nI know this may seem 
 	Oleum: Now you have all the tools to implement binary search in code! => choices
 - Start again => start
 - End the conversation => END
-Oleum: Can you see how this follows the theory you learned from Nathan and Casius?\nGo through the doors at the top and solve the coding challenge. You've got this! => choices
+Oleum: Can you see how this follows the theory you learned from Nathan and Casius?\nGo through the doors to your left and solve the coding challenge. You've got this! => choices
 => END

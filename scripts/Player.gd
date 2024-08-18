@@ -5,11 +5,25 @@ class_name Player
 const speed = 130.0
 const JUMP_VELOCITY = -300.0
 
+@onready var b_search_label = $"../BinarySearchPcode/BSearchLabel"
+@onready var label = $"../BubbleSortPcode/Label"
 @onready var animated_sprite = $AnimatedSprite2D
 var player_state
 
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	if is_instance_valid(label): 
+		print("Label is valid. Hiding label.")
+		label.hide() # would not work without the print statements. I'm afraid to change it :'(
+	else:
+		print("Label is NOT valid.")
+	
+	if is_instance_valid(b_search_label):
+		print("Binary Search Label is valid. Hiding label.")
+		b_search_label.hide()
+	else:
+		print("Binary Search Label is NOT valid.")	
+
 	
 func _on_spawn(position: Vector2, direction: String):
 	global_position = position
@@ -42,15 +56,17 @@ func player():
 	pass
 	
 
-##@onready var actionable_finder = $Direction/ActionableFinder
+func _on_area_2d_body_entered(body):
+	label.show()
 
-##func _unhandled_input(_event: InputEvent) -> void:
-	##if Input.is_action_just_pressed("ui_accept"):
-		##var actionables = actionable_finder.get_overlapping_areas()
-		##if actionables.size() > 0:
-			##actionables[0].action()
-			##return
-#
 
-	## Get the input direction and handle the movement/deceleration.
-	## As good practice, you should replace UI actions with custom gameplay actions.
+func _on_area_2d_body_exited(body):
+	label.hide()
+
+
+func _on_binary_search_pcode_body_entered(body):
+	b_search_label.show() 
+
+
+func _on_binary_search_pcode_body_exited(body):
+	b_search_label.hide()

@@ -1,8 +1,7 @@
 extends Node
 
-@onready var code_edit = $"../CodeEdit"
-#@onready var output_label = $"../OutputLabel"
-@onready var dialogue_label = $DialogueLabel
+@onready var code_edit = $"../ColorRect2/CodeEdit"
+@onready var dialogue_label = $OutputLabel/DialogueLabel
 
 
 func check_code(player_code: String) -> bool:
@@ -27,10 +26,10 @@ func execute_player_code(player_code: String) -> bool:
 		var search_result = instance.binary_search(sorted_array, 1)
 
 		if sorted_array == [1, 2, 3] and search_result == 0:
-			$DialogueLabel.text = "Code is correct! Sorted array:" + str(sorted_array) + "." + " Search result: Index " + str(search_result)
+			dialogue_label.text = "Code is correct! Sorted array:" + str(sorted_array) + "." + " Search result: Index " + str(search_result)
 			return true
 		else:
-			$DialogueLabel.text = "Code is incorrect or produced an unexpected result."
+			dialogue_label.text = "Code is incorrect or produced an unexpected result."
 			return false
 		
 	return false

@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://1n6ksly1pjt3"]
+
+[ext_resource type="Texture2D" uid="uid://dghc7mednbg5b" path="res://assets/No Outlines/npc x2.png" id="1_l8tfw"]
+[ext_resource type="Script" path="res://scripts/altair.gd" id="1_vr64h"]
+[ext_resource type="PackedScene" uid="uid://cbixdbpykggl5" path="res://scenes/help.tscn" id="3_noodc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a50qc"]
+atlas = ExtResource("1_l8tfw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80mcb"]
+atlas = ExtResource("1_l8tfw")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8iw2"]
+atlas = ExtResource("1_l8tfw")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7tpu"]
+atlas = ExtResource("1_l8tfw")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaa86"]
+atlas = ExtResource("1_l8tfw")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7i4fq"]
+atlas = ExtResource("1_l8tfw")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycfy4"]
+atlas = ExtResource("1_l8tfw")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjrkd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a50qc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80mcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8iw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7tpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qaa86")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7i4fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycfy4")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a8xjc"]
+
+[node name="Altair" type="CharacterBody2D"]
+position = Vector2(-56, 0)
+script = ExtResource("1_vr64h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12, 12)
+scale = Vector2(1.375, 1.375)
+sprite_frames = SubResource("SpriteFrames_cjrkd")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_a8xjc")
+
+[node name="Button" type="CheckButton" parent="."]
+offset_left = -96.0
+offset_top = 24.0
+offset_right = -7.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Solve"
+
+[node name="Help" parent="." instance=ExtResource("3_noodc")]
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]
+[connection signal="close_requested" from="Help" to="." method="_on_help_close_requested"]

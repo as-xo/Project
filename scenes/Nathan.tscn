@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bay3ctjeyakve"]
+[gd_scene load_steps=13 format=3 uid="uid://bay3ctjeyakve"]
 
 [ext_resource type="Script" path="res://scripts/npc_1.gd" id="1_d6fb7"]
 [ext_resource type="Texture2D" uid="uid://dghc7mednbg5b" path="res://assets/No Outlines/npc x2.png" id="1_wqxuj"]
@@ -68,6 +68,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_00k38"]
 radius = 8.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_63i3e"]
+font_size = 12
+
 [node name="Nathan" type="CharacterBody2D"]
 script = ExtResource("1_d6fb7")
 
@@ -79,3 +82,11 @@ frame_progress = 0.768731
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_00k38")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -16.0
+offset_top = 32.0
+offset_right = 183.0
+offset_bottom = 55.0
+text = "Press N to talk to Nathan!"
+label_settings = SubResource("LabelSettings_63i3e")
