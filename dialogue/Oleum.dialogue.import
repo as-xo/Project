@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dfjxbi2wvmpsj"
+path="res://.godot/imported/Oleum.dialogue-3de8c1222be47c5b17eb084744a00210.tres"
+
+[deps]
+
+source_file="res://dialogue/Oleum.dialogue"
+dest_files=["res://.godot/imported/Oleum.dialogue-3de8c1222be47c5b17eb084744a00210.tres"]
+
+[params]
+
+defaults=true

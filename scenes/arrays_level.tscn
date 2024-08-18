@@ -12014,6 +12014,11 @@ offset_bottom = 507.0
 script = ExtResource("6_8g1mm")
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-192, 512, -344, 512, -576, 512, -576, 256, -576, -8, -576, -256, -264, -256, 8, -256, 576, -256, 568, -88, 576, 0, 576, 200, 576, 408, 576, 504, 216, 512, 0, 512, 24, 408, 24, 248, 8, 104, 40, -16, 32, -96, 16, -240, -8, -240, -8, -128, -8, -40, -8, 56, -8, 152, -8, 288, -8, 440, -24, 512, -64, 512, -64, 560, -128, 560, -192, 560, 32, 616, 320, 656, 640, 632, 728, 440, 728, 72, 640, -408, 296, -408, -128, -400, -520, -376, -864, -224, -824, 232, -728, 584, -512, 664, -344, 624, -248, 552, -224, 536)
+
 [connection signal="pressed" from="CodeEdit/Button" to="verification" method="_on_button_pressed"]
 
 [editable path="Doors/door_E"]
