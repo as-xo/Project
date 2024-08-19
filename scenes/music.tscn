@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dge21b6e03ej1"]
+
+[ext_resource type="AudioStream" uid="uid://df66f3k8bhchj" path="res://assets/music/sounds/ChillMenu_Loopable.ogg" id="1_qrc17"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_qrc17")
+pitch_scale = 0.65
+autoplay = true
+bus = &"Music"

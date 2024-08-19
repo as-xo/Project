@@ -26,7 +26,7 @@ func execute_player_code(player_code: String) -> bool:
 		var search_result = instance.binary_search(sorted_array, 1)
 
 		if sorted_array == [1, 2, 3] and search_result == 0:
-			dialogue_label.text = "Code is correct! Sorted array:" + str(sorted_array) + "." + " Search result: Index " + str(search_result)
+			dialogue_label.text = "Well done, code is correct!"
 			return true
 		else:
 			dialogue_label.text = "Code is incorrect or produced an unexpected result."
