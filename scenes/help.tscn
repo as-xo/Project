@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbixdbpykggl5"]
 
 [node name="Help" type="Window"]
+transparent_bg = true
 title = "Solution to Challenge"
 size = Vector2i(500, 707)
 always_on_top = true
