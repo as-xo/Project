@@ -3893,6 +3893,15 @@ destination_door_tag = "E"
 [node name="spawn" parent="Doors/door_A" index="1"]
 position = Vector2(32, 80)
 
+[node name="door_B" parent="Doors" instance=ExtResource("6_d7xsw")]
+position = Vector2(-592, -104)
+destination_level_tag = "mini_coding"
+destination_door_tag = "door_c"
+spawn_direction = "left"
+
+[node name="spawn" parent="Doors/door_B" index="1"]
+position = Vector2(88, 8)
+
 [connection signal="body_entered" from="BubbleSortPcode" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="BubbleSortPcode" to="Player" method="_on_area_2d_body_exited"]
 [connection signal="hidden" from="BubbleSortPcode/Label" to="Characters/Oleum" method="_on_label_hidden"]
@@ -3900,3 +3909,4 @@ position = Vector2(32, 80)
 [connection signal="body_exited" from="BinarySearchPcode" to="Player" method="_on_binary_search_pcode_body_exited"]
 
 [editable path="Doors/door_A"]
+[editable path="Doors/door_B"]
