@@ -90,7 +90,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Solve"
 
 [node name="Help" parent="." instance=ExtResource("3_noodc")]
-transparent_bg = true
 position = Vector2i(0, 36)
 
 [connection signal="toggled" from="Button" to="." method="_on_button_toggled"]

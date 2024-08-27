@@ -21,6 +21,10 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 NavigationManager="*res://Global/navigation_manager.gd"
 Music="*res://scenes/music.tscn"
 
+[debug]
+
+gdscript/warnings/integer_division=0
+
 [dotnet]
 
 project/assembly_name="DSA Quest (Final)"

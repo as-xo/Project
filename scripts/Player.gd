@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -300.0
 
 @onready var b_search_label = $"../BinarySearchPcode/BSearchLabel"
 @onready var label = $"../BubbleSortPcode/Label"
+@onready var visualizer: Window = $"../visualize/Visualizer"
 @onready var animated_sprite = $AnimatedSprite2D
 var player_state
 
@@ -65,8 +66,8 @@ func _on_area_2d_body_exited(body):
 
 
 func _on_binary_search_pcode_body_entered(body):
-	b_search_label.show() 
+	visualizer.show() 
 
 
 func _on_binary_search_pcode_body_exited(body):
-	b_search_label.hide()
+	visualizer.hide()

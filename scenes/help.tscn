@@ -3,6 +3,7 @@
 [node name="Help" type="Window"]
 transparent_bg = true
 title = "Solution to Challenge"
+position = Vector2i(0, 36)
 size = Vector2i(500, 707)
 always_on_top = true
 transparent = true

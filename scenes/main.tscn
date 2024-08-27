@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://dhmqm0du8r1xs"]
+[gd_scene load_steps=13 format=4 uid="uid://dhmqm0du8r1xs"]
 
 [ext_resource type="Texture2D" uid="uid://dqd85jwpgtek2" path="res://assets/tileset x2.png" id="1_tno0q"]
 [ext_resource type="Texture2D" uid="uid://cpiip12weqir8" path="res://assets/Props and Items/props and items x2.png" id="2_cj8ko"]
 [ext_resource type="PackedScene" uid="uid://wdixlprn7kon" path="res://scenes/Player.tscn" id="3_upshi"]
+[ext_resource type="PackedScene" uid="uid://tjavm26wsluq" path="res://scenes/visualizer.tscn" id="4_f8uwf"]
 [ext_resource type="PackedScene" uid="uid://bay3ctjeyakve" path="res://scenes/Nathan.tscn" id="4_fkbe0"]
 [ext_resource type="PackedScene" uid="uid://d0k3k1m8puu1s" path="res://scenes/Casius.tscn" id="5_1vhof"]
 [ext_resource type="PackedScene" uid="uid://dwnj3g5jblj01" path="res://scenes/Oleum.tscn" id="5_vwbgc"]
@@ -3767,21 +3768,8 @@ texture = ExtResource("2_cj8ko")
 sources/0 = SubResource("TileSetAtlasSource_6kodc")
 sources/1 = SubResource("TileSetAtlasSource_xi5b6")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_soe17"]
-size = Vector2(64, 54.125)
-
-[sub_resource type="LabelSettings" id="LabelSettings_w4cgc"]
-font_size = 10
-outline_size = 2
-shadow_size = 20
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cqgk"]
 size = Vector2(65, 57)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ao5kq"]
-font_size = 10
-outline_size = 2
-shadow_size = 20
 
 [node name="Main" type="Node2D"]
 
@@ -3812,59 +3800,13 @@ position = Vector2(-247, -99)
 scale = Vector2(2.025, 2.025)
 zoom = Vector2(1.5, 1.5)
 
-[node name="BubbleSortPcode" type="Area2D" parent="."]
-position = Vector2(96, -200)
+[node name="visualize" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BubbleSortPcode"]
-position = Vector2(196, -24)
-shape = SubResource("RectangleShape2D_soe17")
-
-[node name="Label" type="Label" parent="BubbleSortPcode"]
-offset_left = -128.0
-offset_top = -40.0
-offset_right = 176.0
-offset_bottom = 168.0
-text = "function sort(array):
-    set a flag 'swapped' to true
-    
-    while 'swapped' is true:
-        set 'swapped' to false
-        
-        for each element in the array, except the last one:
-            if the current element is greater than the next element:
-                swap the two elements
-                set 'swapped' to true
-                
-    return the sorted array"
-label_settings = SubResource("LabelSettings_w4cgc")
-
-[node name="BinarySearchPcode" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BinarySearchPcode"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visualize"]
 position = Vector2(292, -96)
 shape = SubResource("RectangleShape2D_0cqgk")
 
-[node name="BSearchLabel" type="Label" parent="BinarySearchPcode"]
-offset_left = -32.0
-offset_top = -240.0
-offset_right = 218.0
-offset_bottom = 12.0
-text = "Function binary_search(array, target):
-
-1. Set left to the starting index of the array.
-2. Set right to the last index of the array.
-
-3. While left is less than or equal to right:
-   - Calculate the midpoint index.
-   - If the element at midpoint equals the target:
-     - Return the midpoint index.
-   - If the element at midpoint is less than the target:
-     - Set left to mid + 1.
-   - Else:
-     - Set right to mid - 1.
-
-4. Return -1 if the target is not found."
-label_settings = SubResource("LabelSettings_ao5kq")
+[node name="Visualizer" parent="visualize" instance=ExtResource("4_f8uwf")]
 
 [node name="Characters" type="Node" parent="."]
 
@@ -3902,11 +3844,8 @@ spawn_direction = "left"
 [node name="spawn" parent="Doors/door_B" index="1"]
 position = Vector2(88, 8)
 
-[connection signal="body_entered" from="BubbleSortPcode" to="Player" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="BubbleSortPcode" to="Player" method="_on_area_2d_body_exited"]
-[connection signal="hidden" from="BubbleSortPcode/Label" to="Characters/Oleum" method="_on_label_hidden"]
-[connection signal="body_entered" from="BinarySearchPcode" to="Player" method="_on_binary_search_pcode_body_entered"]
-[connection signal="body_exited" from="BinarySearchPcode" to="Player" method="_on_binary_search_pcode_body_exited"]
+[connection signal="body_entered" from="visualize" to="Player" method="_on_binary_search_pcode_body_entered"]
+[connection signal="body_exited" from="visualize" to="Player" method="_on_binary_search_pcode_body_exited"]
 
 [editable path="Doors/door_A"]
 [editable path="Doors/door_B"]

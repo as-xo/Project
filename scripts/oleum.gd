@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
-#@onready var actionable_finder = $Direction/ActionableFinder
-@onready var psuedocode = $"../../psuedocode"
 
 var is_talking = false
 
