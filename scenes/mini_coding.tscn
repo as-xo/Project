@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c2wee73hpqrbb"]
+[gd_scene load_steps=15 format=4 uid="uid://c2wee73hpqrbb"]
 
 [ext_resource type="Script" path="res://scripts/mini_coding.gd" id="1_7u4qk"]
 [ext_resource type="Texture2D" uid="uid://dqd85jwpgtek2" path="res://assets/tileset x2.png" id="1_v04op"]
@@ -11282,6 +11282,9 @@ texture = ExtResource("2_6f631")
 sources/0 = SubResource("TileSetAtlasSource_35lhg")
 sources/1 = SubResource("TileSetAtlasSource_0yjsg")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7v8l"]
+size = Vector2(146, 122)
+
 [node name="Mini_Coding" type="Node2D"]
 script = ExtResource("1_7u4qk")
 
@@ -11306,5 +11309,14 @@ tile_set = SubResource("TileSet_o55qd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
+
+[node name="coding_challenges" type="Node" parent="."]
+
+[node name="B_Sort_challenge" type="Area2D" parent="coding_challenges"]
+position = Vector2(-424, -168)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coding_challenges/B_Sort_challenge"]
+position = Vector2(63, 51)
+shape = SubResource("RectangleShape2D_d7v8l")
 
 [editable path="Background/door_C"]

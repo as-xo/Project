@@ -3769,7 +3769,7 @@ sources/0 = SubResource("TileSetAtlasSource_6kodc")
 sources/1 = SubResource("TileSetAtlasSource_xi5b6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cqgk"]
-size = Vector2(65, 57)
+size = Vector2(306.25, 214.25)
 
 [node name="Main" type="Node2D"]
 
@@ -3803,10 +3803,12 @@ zoom = Vector2(1.5, 1.5)
 [node name="visualize" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="visualize"]
-position = Vector2(292, -96)
+position = Vector2(329.125, -179.125)
 shape = SubResource("RectangleShape2D_0cqgk")
 
 [node name="Visualizer" parent="visualize" instance=ExtResource("4_f8uwf")]
+position = Vector2i(0, 36)
+visible = false
 
 [node name="Characters" type="Node" parent="."]
 

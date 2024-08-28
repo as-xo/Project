@@ -5,6 +5,7 @@ extends Window
 @onready var start_button: OptionButton = $OptionButton
 @onready var line_edit: LineEdit = $LineEdit
 @onready var binary_search_input: LineEdit = $Binary_search_input
+@onready var warning_label: Label = $warning_label
 
 var array = [5, 3, 8, 4, 2]
 var array_labels = []
@@ -52,7 +53,7 @@ func _on_target_entered(target):
 		var target_int = int(target)  # Convert the input to an integer.
 		_binary_search_visualize(target_int)  # Call the binary search function with the target.
 	else:
-		print("Invalid target input. Please enter a valid integer.")
+		warning_label.text = "Invalid target input. Please enter a valid integer."
 
 func _on_enter_pressed() -> void:
 	# Parse the entered text into an array of integers
@@ -62,7 +63,7 @@ func _on_enter_pressed() -> void:
 		array = new_array
 		_create_visual_array()  # Recreate visual representation with the new array
 	else:
-		print("Invalid input. Please enter a comma-separated list of numbers.")
+		warning_label.text = "Invalid input. Please enter a comma-separated list of numbers."
 
 
 func _parse_input(text):
@@ -74,10 +75,10 @@ func _parse_input(text):
 		if elem.is_valid_int():
 			new_array.append(int(elem))
 		else:
-			print("Invalid input: ", elem)
+			warning_label.text = "Invalid input: " + elem
 	
 	return new_array
-
+	start_button.disabled = false
 
 func _is_index_in_bounds(index):
 	return index >= 0 and index < array_labels.size()
@@ -124,6 +125,8 @@ func _swap_visual_elements(index1, index2):
 	container.move_child(array_labels[index1], index1)
 	container.move_child(array_labels[index2], index2)
 	
+	start_button.disabled = false
+	
 func _binary_search_visualize(target):
 	var low = 0
 	var high = array.size() - 1
@@ -138,7 +141,7 @@ func _binary_search_visualize(target):
 			await get_tree().create_timer(1.0).timeout  # Add a delay to visualize this step
 
 			if array[mid] == target:
-				print("Element found at index: ", mid)
+				warning_label.text = "Element found at index: " + str(mid)
 				return mid
 			elif array[mid] < target:
 				low = mid + 1
@@ -149,12 +152,13 @@ func _binary_search_visualize(target):
 			_reset_binary_search_colors(low, mid, high)
 			await get_tree().create_timer(1.0).timeout  # Add another delay for resetting colors
 		else:
-			print("Error: Index out of bounds.")
+			warning_label.text = "Error: Index out of bounds."
 			break
 		
-		start_button.disabled = false
-	print("Element not found")
+	warning_label.text = "Element not found"
+	start_button.disabled = false
 	return -1
+
 
 func _highlight_binary_search_elements(low, mid, high):
 	array_labels[low].modulate = Color(0, 1, 0)  # Green for low
@@ -169,3 +173,5 @@ func _reset_binary_search_colors(low, mid, high):
 
 func _on_close_requested() -> void:
 	visualizer.hide()
+	
+	

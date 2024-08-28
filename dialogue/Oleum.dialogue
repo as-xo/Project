@@ -1,20 +1,8 @@
 ~ start
 
-Oleum: [[Hi|Hello|Howdy]], let's look at some psuedocode.\nI know this may seem daunting but I will take you through each step of the algorithms!
-~ choices
-- Bubble Sort Implementation
-	Oluem: Let's get straight into it.Stand by the Blue computer and take a look at the psuedocode. Let's go through each line so we can understand the logic!
-	Oleum: There are 9 lines of code. Line 1: Initialises a sorting function which accepts an array as the arguement.\nLine 2: Sets the variable "swapped" to true to start the loop.If it was set to false the loop would not start!\nLine 3: Initializes the 'while' loop and since 'swapped' is true, the next line executes.
-	Oleum: Line 4: Sets the variable 'swapped' to false with each pass.This will help to track if any swaps occur or are needed.\nLine 5: Initializes the for loop to iterate through each element except the last one.\nLine 6: Uses an if statement to check if the current element is greater than the next one.
-	Oleum: Line 7: If the condition is true, then the two elements are swapped.\nLine 8: The 'swapped' counter is updated to true and another pass begins.\nLine 9: This line returns the sorted array after the algorithm exits.
-	Oleum: Pretty straightforward right? Now that you see the logic behind the algorithm in psuedocode, you can implement it in code! => choices
-- Binary Search Implementation
-	Oluem: Let's get straight into it.Stand by the Green computer and take a look at the psuedocode. Let's go through each line so we can understand the logic!
-	Oleum: There are 10 lines of code.Line 1:Initialises a binay search function that accepts two arguements; an array and target value.\nLine 2,3: Set left to the start index and right to the last index of the array.\nLine 3: Initialises the while loop to iterate through the array while the left is less than the right. This ensures every element is visited.
-	Oleum: Line 4: This line calculates the mid index.\nLine 5,6: If the element ad the mid index is equal to the target, then the midpoint index is returned.\nLine 6,7: If the element at the midpoint is less than the target, move the search space to the right.
-	Oleum: Lines 8,9: Or else move the search space to the left of mid.\nLine 10: This line returns -1 if the target element is not found in the array.
-	Oleum: Now you have all the tools to implement binary search in code! => choices
-- Start again => start
+Oleum: [[Hi|Hello|Howdy]], let's see bubble sort and Binary search in action.\nSelect the sorting algorithm and then select the search algorithm to see how they work.
+Oleum: After you do that, try and run the search algorithm again without sorting first. Do you get the same answer?
+Oleum: pssst, don't forget to try your own array and search target if you need to see more examples!
 - End the conversation => END
-Oleum: Can you see how this follows the theory you learned from Nathan and Casius?\nGo through the doors to your left and solve the coding challenge. You've got this! => choices
+Oleum: 
 => END
