@@ -20,7 +20,6 @@ Casius: [[Hi|Hello]], let's learn about Bubble Sort and Binary Search.
 	Casius: So now our search space looks like this [7,9,11]. Again, the mid is calculated giving us [7]. Again 7<11 so the search space moves to the left; [9,11].\nAgain we calculate a new mid [11],since the mid now matches our target the algorithm exits.
 	Casius: What if our target = 4?....The same steps would be taken, calculate the mid and if mid > target then the search space would move to the right.This is because we know that values < mid would be found to the right of the array.\n There has been a lot of information but don't worry, you will get a chance to practice this! 
 	Casius: Go and speak to Olium to learn how to implement these in code.
-- Start again => start
 - End the conversation => END
 
 

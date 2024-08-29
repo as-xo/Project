@@ -21,10 +21,13 @@ text = "func binary_search(arr, target):
 indent_wrapped_lines = true
 highlight_current_line = true
 
-[node name="Button" type="Button" parent="TextEdit"]
-layout_mode = 0
+[node name="Button" type="Button" parent="."]
 offset_left = 440.0
 offset_top = 344.0
 offset_right = 512.0
 offset_bottom = 384.0
 text = "Run"
+
+[node name="output" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

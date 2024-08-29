@@ -34,7 +34,6 @@ Nathan: Here are some choices. => choices
 	Nathan: The time complexity of Binary Search is O log N. This is because the search space is halved with each iteration! This is very efficient!
 	Nathan: The time complexity of Bubble Sort is O(n^2). This is because it uses nested loops. The outer loop repeats until the array is sorted. the inner loop compares and swaps adjacent elements. For larger data sets, this is not the most efficient algorithm to use!
 	- Back to options => choices	
-- Start again => start
 - End the conversation => END
 
 => END

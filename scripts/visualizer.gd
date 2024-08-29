@@ -20,7 +20,6 @@ func _ready():
 	start_button.connect("item_selected", Callable(self, "_on_option_selected"))
 	line_edit.connect("text_entered", Callable(self, "_on_text_entered"))
 	binary_search_input.connect("text_entered", Callable(self, "_on_target_entered"))
-	visualizer.hide()	
 	
 
 func _create_visual_array():
