@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://bay3ctjeyakve"]
+
+[ext_resource type="Script" path="res://scripts/npc_1.gd" id="1_d6fb7"]
+[ext_resource type="Texture2D" uid="uid://dghc7mednbg5b" path="res://assets/No Outlines/npc x2.png" id="1_wqxuj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai0fp"]
+atlas = ExtResource("1_wqxuj")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl3t5"]
+atlas = ExtResource("1_wqxuj")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvilj"]
+atlas = ExtResource("1_wqxuj")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2yoh"]
+atlas = ExtResource("1_wqxuj")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8pbg"]
+atlas = ExtResource("1_wqxuj")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc42e"]
+atlas = ExtResource("1_wqxuj")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w2qx"]
+atlas = ExtResource("1_wqxuj")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y7olj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ai0fp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl3t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvilj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2yoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8pbg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc42e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w2qx")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_00k38"]
+radius = 8.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_63i3e"]
+font_size = 12
+
+[node name="Nathan" type="CharacterBody2D"]
+script = ExtResource("1_d6fb7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_y7olj")
+animation = &"talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_00k38")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -16.0
+offset_top = 32.0
+offset_right = 183.0
+offset_bottom = 55.0
+text = "Press N to talk to Nathan!"
+label_settings = SubResource("LabelSettings_63i3e")

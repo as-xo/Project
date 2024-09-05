@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cieyttd74fjn6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 512.0
+offset_bottom = 384.0
+text = "func binary_search(arr, target):
+    var low = 0
+    var high = arr.size() - 1
+    
+    while low <= high:
+        var mid = (low + high) / 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1"
+indent_wrapped_lines = true
+highlight_current_line = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 344.0
+offset_right = 512.0
+offset_bottom = 384.0
+text = "Run"
+
+[node name="output" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

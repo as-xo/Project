@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://dwnj3g5jblj01"]
+
+[ext_resource type="Script" path="res://scripts/oleum.gd" id="1_gp5wv"]
+[ext_resource type="Texture2D" uid="uid://dghc7mednbg5b" path="res://assets/No Outlines/npc x2.png" id="1_m0gcp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwjox"]
+atlas = ExtResource("1_m0gcp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv53e"]
+atlas = ExtResource("1_m0gcp")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8buu4"]
+atlas = ExtResource("1_m0gcp")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxsb3"]
+atlas = ExtResource("1_m0gcp")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsiya"]
+atlas = ExtResource("1_m0gcp")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ixtr"]
+atlas = ExtResource("1_m0gcp")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srwbx"]
+atlas = ExtResource("1_m0gcp")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjv2v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwjox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv53e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8buu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxsb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsiya")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ixtr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srwbx")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gerhd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pcjnx"]
+font_size = 12
+
+[node name="Oleum" type="CharacterBody2D"]
+script = ExtResource("1_gp5wv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_xjv2v")
+animation = &"talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gerhd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -8.0
+offset_top = 40.0
+offset_right = 185.0
+offset_bottom = 63.0
+text = "Press O to talk to Oleum!
+"
+label_settings = SubResource("LabelSettings_pcjnx")

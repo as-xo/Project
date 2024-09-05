@@ -1,0 +1,39 @@
+~ start
+
+Nathan: [[Hi|Hello]], Lets learn about Arrays!
+Nathan: I will tell you some information but remember, if you get stuck there are a lot of resources on the web that go into further detail!
+Nathan: Here are some choices. => choices
+~ choices
+- What are Arrays?
+	Nathan: Arrays are data structures that hold multiple values and are stored in contigious memory locations.\n Arrays use zero based indexing meaning the count starts at 0 instead of 1. They typically contain the same data type but not always.This can depend on the programming language syntax(p.s. look up Dynamic,Static, Strong and Fixed Typing). 
+	Nathan: Lets get back on track!\nHere is an example: my_array = [13,4,7,15,10].\nWhat is the element at index[2]?
+	If you said 7 you're correct! This is because for the array [13,4,7,15,10], indexing would work like this; \n my_array[0] = 13, my_array[1] = 4 and my_array[2] = 7 
+	...okay, I think you get the picture.
+	- Back to options => choices		
+- What are they used for?
+	Nathan: I'm glad you asked! \n Arrays are useful for storing multiple values e.g a group of objects.\nThey help to organise data e.g matrices for mathematical operations or even implementing other data structures like stacks or queues!\nArrays are great for efficient data access e.g. indexing or iterating through the array.
+	Nathan: I think you can agree that Arrays are an important data structure right?\nIf I haven't convinced you yet, why don't I tell you how they are used in everyday life?
+	Nathan: Let's look at 3 ways arrays can be used. Gaming, Data analysis and Web Development. Click one of the options to see how they are used in these fields.
+	- Game Development
+		Nathan: I'm sure you've played a game where just can't reach the final boss level, right?\nWell, those levels use arrays to store level data for example the layout, enemy placement and collectible items!
+		Nathan: How about when those pesky enemies spawn out of nowhere?...The enemy positions are held in arrays as x,y coordinates.
+		Nathan: Arrays also handle player inventory, for example when a character collects items. => choices
+	- Data Analysis
+		Nathan: Imagine you have a large file of data and you need to search for one thing,that could take you hours, days, wEeKs, YEARS....sorry....The point is, you need an efficient way to handle this data and this is where arrays come in.
+		Nathan: By storing information in an array, you can analyse and manipulate the data more efficiently.
+		Nathan: Arrays are also used in performing calculations on multiple values simultaneously and generating charts, graphs and other visualisations. => choices 
+	- Web Development
+		Nathan: Arrays are used to generate dynamic content on a web page e.g. lists and tables. They can help to manage user data e.g user information, preferences or shopping cart items.
+		Nathan: They can also be used to handle form data by storing multiple values from user input through a form. => choices
+	- Back to options => choices
+- Array Operations
+	Nathan: Common operations peformed on arrays include:\nTraversal: Visiting each element in a specific order.\nInsert: Adding new elements at a specific index.\nDelete: Removing elemnts at a specific index.\nSearch: Finding the index of an element.\nSort: Arranging elements in specific order. 	
+	- Back to options => choices
+- Time Complexity
+	Nathan: We are going to focus on Bubble Sort and Binary Search in this tutorial.
+	Nathan: The time complexity of Binary Search is O log N. This is because the search space is halved with each iteration! This is very efficient!
+	Nathan: The time complexity of Bubble Sort is O(n^2). This is because it uses nested loops. The outer loop repeats until the array is sorted. the inner loop compares and swaps adjacent elements. For larger data sets, this is not the most efficient algorithm to use!
+	- Back to options => choices	
+- End the conversation => END
+
+=> END

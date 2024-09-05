@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cbixdbpykggl5"]
+
+[node name="Help" type="Window"]
+transparent_bg = true
+title = "Solution to Challenge"
+position = Vector2i(0, 36)
+size = Vector2i(500, 707)
+always_on_top = true
+transparent = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 496.0
+offset_bottom = 703.0
+color = Color(0.490196, 0.454902, 0.509804, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -699.0
+offset_right = 381.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.000693898, 0.000693898, 0.000693898, 1)
+text = "func sort(array: Array) -> Array: 
+    var swapped = true 
+    while swapped: 
+        swapped = false 
+        for i in range(array.size() - 1): 
+            if array[i] > array[i + 1]: 
+                var temp = array[i] 
+                array[i] = array[i + 1] 
+                array[i + 1] = temp 
+                swapped = true 
+    return array 
+
+func binary_search(array: Array, target: int) -> int: 
+    var left = 0 
+    var right = array.size() - 1 
+    
+    while left <= right: 
+        var mid = left + int((right - left) / 2) 
+        
+        if array[mid] == target:
+            return mid 
+        elif array[mid] < target:
+            left = mid + 1 
+        else:
+            right = mid - 1 
+    
+    return -1   "
