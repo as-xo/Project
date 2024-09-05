@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlkxmkobyjtrn"]
+
+[ext_resource type="Script" path="res://scripts/coding_slots.gd" id="1_7kss8"]
+
+[node name="DragnDrop" type="PanelContainer"]
+script = ExtResource("1_7kss8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Line_1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Line_2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Line_3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Line_4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Line_5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "5"
+
+[node name="Line_6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "6"
+
+[node name="Line_7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "7"
+
+[node name="Line_8" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "8"
+
+[node name="Line_9" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "9"
+
+[node name="Line_10" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "10"

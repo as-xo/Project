@@ -1,0 +1,356 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_yvljf"]
+
+[resource]
+script = ExtResource("1_yvljf")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Casius")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "[3,1,2,4,5]: For i=0 element 3 is compared with 1 and swapped, now the array looks like this [1,3,2,4,5].
+i=1 [1,2,3,4,5].
+i=2 [1,2,3,4,5] No swap.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[3,1,2,4,5]: For i=0 element 3 is compared with 1 and swapped, now the array looks like this [1,3,2,4,5].
+i=1 [1,2,3,4,5].
+i=2 [1,2,3,4,5] No swap.",
+"type": &"dialogue"
+},
+"11": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "The algorithm exits since there are no more swaps.Notice how in the second pass the algorithm didn't automatically exit after i=1?
+This is because another iteration must be performed to ensure the array is sorted.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The algorithm exits since there are no more swaps.Notice how in the second pass the algorithm didn't automatically exit after i=1?
+This is because another iteration must be performed to ensure the array is sorted.",
+"type": &"dialogue"
+},
+"12": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "3",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Bubble sort is a great algorithm to start with when learning, however it is not the most efficient for larger data sets as the time complexity is quite high.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bubble sort is a great algorithm to start with when learning, however it is not the most efficient for larger data sets as the time complexity is quite high.",
+"type": &"dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"next_id_after": "26",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Binary Search",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Binary Search",
+"type": &"response"
+},
+"14": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Binary Search is a searching algorithm. It repeatedly halves the search space with each iteration until the target is found or the search space is empty.
+The algorithm compares a target element with the middle value of the search space.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Binary Search is a searching algorithm. It repeatedly halves the search space with each iteration until the target is found or the search space is empty.
+The algorithm compares a target element with the middle value of the search space.",
+"type": &"dialogue"
+},
+"15": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Before binary search can be used on an array there are two pre-conditions which must be met:
+1:The array must be sorted
+2: Access to any element of the data structure should be in constant time.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Before binary search can be used on an array there are two pre-conditions which must be met:
+1:The array must be sorted
+2: Access to any element of the data structure should be in constant time.",
+"type": &"dialogue"
+},
+"16": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Let's take the array [1,4,6,7,9,11] with the target = 11. Our array meets the pre-conditions of Binary serach because it is sorted and accessing an element will take O(1), constant time.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Let's take the array [1,4,6,7,9,11] with the target = 11. Our array meets the pre-conditions of Binary serach because it is sorted and accessing an element will take O(1), constant time.",
+"type": &"dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Binary Search divides the search space into two halves by finding the middle index 'mid'. Here mid=[6],in GDScript the mid is calculated as 'left+(right-left)//2'.
+Left= the left index 0 and right = the right index, in this case 5.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Binary Search divides the search space into two halves by finding the middle index 'mid'. Here mid=[6],in GDScript the mid is calculated as 'left+(right-left)//2'.
+Left= the left index 0 and right = the right index, in this case 5.",
+"type": &"dialogue"
+},
+"18": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "If you're stuck on the math, lets revisit integer division.So for the formula \"left + (right - left) // 2\" , we would get 0 + (5-0) // 2 = 2.5
+ We know that with integer division the decimal part is dropped so our midpoint falls on index [2].
+In our aray [1,4,6,7,9,11], that is element [6].",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If you're stuck on the math, lets revisit integer division.So for the formula \"left + (right - left) // 2\" , we would get 0 + (5-0) // 2 = 2.5
+ We know that with integer division the decimal part is dropped so our midpoint falls on index [2].
+In our aray [1,4,6,7,9,11], that is element [6].",
+"type": &"dialogue"
+},
+"19": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Now that we have our mid [6], we can compare it with our target value 11.Since 6 is less than 11, the algorithm continues with the left half of the array; where values > 6 are stored.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Now that we have our mid [6], we can compare it with our target value 11.Since 6 is less than 11, the algorithm continues with the left half of the array; where values > 6 are stored.",
+"type": &"dialogue"
+},
+"20": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "So now our search space looks like this [7,9,11]. Again, the mid is calculated giving us [7]. Again 7<11 so the search space moves to the left; [9,11].
+Again we calculate a new mid [11],since the mid now matches our target the algorithm exits.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So now our search space looks like this [7,9,11]. Again, the mid is calculated giving us [7]. Again 7<11 so the search space moves to the left; [9,11].
+Again we calculate a new mid [11],since the mid now matches our target the algorithm exits.",
+"type": &"dialogue"
+},
+"21": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "What if our target = 4?....The same steps would be taken, calculate the mid and if mid > target then the search space would move to the right.This is because we know that values < mid would be found to the right of the array.
+ There has been a lot of information but don't worry, you will get a chance to practice this!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What if our target = 4?....The same steps would be taken, calculate the mid and if mid > target then the search space would move to the right.This is because we know that values < mid would be found to the right of the array.
+ There has been a lot of information but don't worry, you will get a chance to practice this!",
+"type": &"dialogue"
+},
+"22": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "26",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Go and speak to Olium to learn how to implement these in code.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Go and speak to Olium to learn how to implement these in code.",
+"type": &"dialogue"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "end",
+"next_id_after": "26",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "End the conversation",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "End the conversation",
+"type": &"response"
+},
+"26": {
+"id": "26",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello]], let's learn about Bubble Sort and Binary Search.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello]], let's learn about Bubble Sort and Binary Search.",
+"type": &"dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"next_id_after": "26",
+"notes": "",
+"responses": PackedStringArray("4", "13", "23"),
+"tags": PackedStringArray(),
+"text": "Bubble sort",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bubble sort",
+"type": &"response"
+},
+"5": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Bubble Sort is a simple sorting algorithm. It repeatedly swaps adjacent elements to place the largest element to the right of the array.
+This process is repeated until the array is sorted.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bubble Sort is a simple sorting algorithm. It repeatedly swaps adjacent elements to place the largest element to the right of the array.
+This process is repeated until the array is sorted.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Let's take the array [5,3,1,2,4]. Lets go through the iterations of bubble sort for this array.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Let's take the array [5,3,1,2,4]. Lets go through the iterations of bubble sort for this array.",
+"type": &"dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "[5,3,1,2,4]
+Iteration 0 compares the first and second element,since 5 is larger than 3 these two elements are swapped like so [3,5,1,2,4].",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[5,3,1,2,4]
+Iteration 0 compares the first and second element,since 5 is larger than 3 these two elements are swapped like so [3,5,1,2,4].",
+"type": &"dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "i=1 [3,1,5,2,4], 5 is larger than 1 so these elements are swapped.
+i=2 [3,1,2,5,4].
+i=3 [3,1,2,4,5].",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "i=1 [3,1,5,2,4], 5 is larger than 1 so these elements are swapped.
+i=2 [3,1,2,5,4].
+i=3 [3,1,2,4,5].",
+"type": &"dialogue"
+},
+"9": {
+"character": "Casius",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "[3,1,2,4,5]: Now that the largest element is to the right, the 2nd largest element needs to be placed in its correct position.This is done with a second pass of the algorithm.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[3,1,2,4,5]: Now that the largest element is to the right, the 2nd largest element needs to be placed in its correct position.This is done with a second pass of the algorithm.",
+"type": &"dialogue"
+}
+}
+raw_text = "~ start
+
+Casius: [[Hi|Hello]], let's learn about Bubble Sort and Binary Search.
+- Bubble sort
+	Casius: Bubble Sort is a simple sorting algorithm. It repeatedly swaps adjacent elements to place the largest element to the right of the array.\\nThis process is repeated until the array is sorted. 
+	Casius: Let's take the array [5,3,1,2,4]. Lets go through the iterations of bubble sort for this array.
+	\\n[5,3,1,2,4]\\nIteration 0 compares the first and second element,since 5 is larger than 3 these two elements are swapped like so [3,5,1,2,4].
+	\\ni=1 [3,1,5,2,4], 5 is larger than 1 so these elements are swapped.\\ni=2 [3,1,2,5,4].\\ni=3 [3,1,2,4,5].
+	Casius: [3,1,2,4,5]\\: Now that the largest element is to the right, the 2nd largest element needs to be placed in its correct position.This is done with a second pass of the algorithm.
+	Casius: [3,1,2,4,5]\\: For i=0 element 3 is compared with 1 and swapped, now the array looks like this [1,3,2,4,5].\\ni=1 [1,2,3,4,5].\\ni=2 [1,2,3,4,5] No swap.
+	Casius: The algorithm exits since there are no more swaps.Notice how in the second pass the algorithm didn't automatically exit after i=1?\\nThis is because another iteration must be performed to ensure the array is sorted.
+	Casius: Bubble sort is a great algorithm to start with when learning, however it is not the most efficient for larger data sets as the time complexity is quite high. => start
+- Binary Search
+	Casius: Binary Search is a searching algorithm. It repeatedly halves the search space with each iteration until the target is found or the search space is empty.\\nThe algorithm compares a target element with the middle value of the search space.
+	Casius: Before binary search can be used on an array there are two pre-conditions which must be met\\:\\n1:The array must be sorted\\n2: Access to any element of the data structure should be in constant time.
+	Casius: Let's take the array [1,4,6,7,9,11] with the target = 11. Our array meets the pre-conditions of Binary serach because it is sorted and accessing an element will take O(1), constant time.
+	\\nBinary Search divides the search space into two halves by finding the middle index 'mid'. Here mid=[6],in GDScript the mid is calculated as 'left+(right-left)//2'.\\nLeft= the left index 0 and right = the right index, in this case 5.
+	Casius: If you're stuck on the math, lets revisit integer division.So for the formula \"left + (right - left) // 2\" , we would get 0 + (5-0) // 2 = 2.5\\n We know that with integer division the decimal part is dropped so our midpoint falls on index [2].\\nIn our aray [1,4,6,7,9,11], that is element [6].
+	Casius: Now that we have our mid [6], we can compare it with our target value 11.Since 6 is less than 11, the algorithm continues with the left half of the array; where values > 6 are stored.
+	Casius: So now our search space looks like this [7,9,11]. Again, the mid is calculated giving us [7]. Again 7<11 so the search space moves to the left; [9,11].\\nAgain we calculate a new mid [11],since the mid now matches our target the algorithm exits.
+	Casius: What if our target = 4?....The same steps would be taken, calculate the mid and if mid > target then the search space would move to the right.This is because we know that values < mid would be found to the right of the array.\\n There has been a lot of information but don't worry, you will get a chance to practice this! 
+	Casius: Go and speak to Olium to learn how to implement these in code.
+- End the conversation => END
+
+
+=> END"
+metadata/dialogue_manager_version = "2.41.4"

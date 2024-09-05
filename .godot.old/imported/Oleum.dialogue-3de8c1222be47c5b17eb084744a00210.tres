@@ -1,0 +1,99 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_dv7pn"]
+
+[resource]
+script = ExtResource("1_dv7pn")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Oleum", "Oleum:")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"3": {
+"character": "Oleum",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], let's see bubble sort and Binary search in action.
+Select the sorting algorithm and then select the search algorithm to see how they work.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], let's see bubble sort and Binary search in action.
+Select the sorting algorithm and then select the search algorithm to see how they work.",
+"type": &"dialogue"
+},
+"4": {
+"character": "Oleum",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "After you do that, try and run the search algorithm again without sorting first. Do you get the same answer?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "After you do that, try and run the search algorithm again without sorting first. Do you get the same answer?",
+"type": &"dialogue"
+},
+"5": {
+"character": "Oleum",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "pssst, don't forget to try your own array and search target if you need to see more examples!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "pssst, don't forget to try your own array and search target if you need to see more examples!",
+"type": &"dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "end",
+"next_id_after": "7",
+"notes": "",
+"responses": PackedStringArray("6"),
+"tags": PackedStringArray(),
+"text": "End the conversation",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "End the conversation",
+"type": &"response"
+},
+"7": {
+"character": "Oleum:",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "",
+"type": &"dialogue"
+},
+"8": {
+"id": "8",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ start
+
+Oleum: [[Hi|Hello|Howdy]], let's see bubble sort and Binary search in action.\\nSelect the sorting algorithm and then select the search algorithm to see how they work.
+Oleum: After you do that, try and run the search algorithm again without sorting first. Do you get the same answer?
+Oleum: pssst, don't forget to try your own array and search target if you need to see more examples!
+- End the conversation => END
+Oleum: 
+=> END"
+metadata/dialogue_manager_version = "2.41.4"

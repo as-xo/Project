@@ -1,0 +1,552 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_q0qpr"]
+
+[resource]
+script = ExtResource("1_q0qpr")
+using_states = PackedStringArray()
+titles = {
+"choices": "7",
+"start": "3"
+}
+character_names = PackedStringArray("Nathan")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "If you said 7 you're correct! This is because for the array [13,4,7,15,10], indexing would work like this; 
+ my_array[0] = 13, my_array[1] = 4 and my_array[2] = 7",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If you said 7 you're correct! This is because for the array [13,4,7,15,10], indexing would work like this; 
+ my_array[0] = 13, my_array[1] = 4 and my_array[2] = 7",
+"type": &"dialogue"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "...okay, I think you get the picture.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...okay, I think you get the picture.",
+"type": &"dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "7",
+"next_id_after": "39",
+"notes": "",
+"parent_id": "7",
+"responses": PackedStringArray("12"),
+"tags": PackedStringArray(),
+"text": "Back to options",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Back to options",
+"type": &"response"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"next_id_after": "39",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "What are they used for?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What are they used for?",
+"type": &"response"
+},
+"14": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "I'm glad you asked! 
+ Arrays are useful for storing multiple values e.g a group of objects.
+They help to organise data e.g matrices for mathematical operations or even implementing other data structures like stacks or queues!
+Arrays are great for efficient data access e.g. indexing or iterating through the array.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm glad you asked! 
+ Arrays are useful for storing multiple values e.g a group of objects.
+They help to organise data e.g matrices for mathematical operations or even implementing other data structures like stacks or queues!
+Arrays are great for efficient data access e.g. indexing or iterating through the array.",
+"type": &"dialogue"
+},
+"15": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "I think you can agree that Arrays are an important data structure right?
+If I haven't convinced you yet, why don't I tell you how they are used in everyday life?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I think you can agree that Arrays are an important data structure right?
+If I haven't convinced you yet, why don't I tell you how they are used in everyday life?",
+"type": &"dialogue"
+},
+"16": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Let's look at 3 ways arrays can be used. Gaming, Data analysis and Web Development. Click one of the options to see how they are used in these fields.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Let's look at 3 ways arrays can be used. Gaming, Data analysis and Web Development. Click one of the options to see how they are used in these fields.",
+"type": &"dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"next_id_after": "39",
+"notes": "",
+"parent_id": "13",
+"responses": PackedStringArray("17", "21", "25", "28"),
+"tags": PackedStringArray(),
+"text": "Game Development",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Game Development",
+"type": &"response"
+},
+"18": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "I'm sure you've played a game where just can't reach the final boss level, right?
+Well, those levels use arrays to store level data for example the layout, enemy placement and collectible items!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm sure you've played a game where just can't reach the final boss level, right?
+Well, those levels use arrays to store level data for example the layout, enemy placement and collectible items!",
+"type": &"dialogue"
+},
+"19": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "How about when those pesky enemies spawn out of nowhere?...The enemy positions are held in arrays as x,y coordinates.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How about when those pesky enemies spawn out of nowhere?...The enemy positions are held in arrays as x,y coordinates.",
+"type": &"dialogue"
+},
+"20": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "7",
+"notes": "",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "Arrays also handle player inventory, for example when a character collects items.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Arrays also handle player inventory, for example when a character collects items.",
+"type": &"dialogue"
+},
+"21": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"next_id_after": "39",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Data Analysis",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Data Analysis",
+"type": &"response"
+},
+"22": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"notes": "",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "Imagine you have a large file of data and you need to search for one thing,that could take you hours, days, wEeKs, YEARS....sorry....The point is, you need an efficient way to handle this data and this is where arrays come in.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Imagine you have a large file of data and you need to search for one thing,that could take you hours, days, wEeKs, YEARS....sorry....The point is, you need an efficient way to handle this data and this is where arrays come in.",
+"type": &"dialogue"
+},
+"23": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"notes": "",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "By storing information in an array, you can analyse and manipulate the data more efficiently.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "By storing information in an array, you can analyse and manipulate the data more efficiently.",
+"type": &"dialogue"
+},
+"24": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "7",
+"notes": "",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "Arrays are also used in performing calculations on multiple values simultaneously and generating charts, graphs and other visualisations.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Arrays are also used in performing calculations on multiple values simultaneously and generating charts, graphs and other visualisations.",
+"type": &"dialogue"
+},
+"25": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"next_id_after": "39",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Web Development",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Web Development",
+"type": &"response"
+},
+"26": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "Arrays are used to generate dynamic content on a web page e.g. lists and tables. They can help to manage user data e.g user information, preferences or shopping cart items.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Arrays are used to generate dynamic content on a web page e.g. lists and tables. They can help to manage user data e.g user information, preferences or shopping cart items.",
+"type": &"dialogue"
+},
+"27": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "7",
+"notes": "",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "They can also be used to handle form data by storing multiple values from user input through a form.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "They can also be used to handle form data by storing multiple values from user input through a form.",
+"type": &"dialogue"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "7",
+"next_id_after": "39",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "Back to options",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Back to options",
+"type": &"response"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"next_id_after": "39",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Array Operations",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Array Operations",
+"type": &"response"
+},
+"3": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello]], Lets learn about Arrays!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello]], Lets learn about Arrays!",
+"type": &"dialogue"
+},
+"30": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"notes": "",
+"parent_id": "29",
+"tags": PackedStringArray(),
+"text": "Common operations peformed on arrays include:
+Traversal: Visiting each element in a specific order.
+Insert: Adding new elements at a specific index.
+Delete: Removing elemnts at a specific index.
+Search: Finding the index of an element.
+Sort: Arranging elements in specific order.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Common operations peformed on arrays include:
+Traversal: Visiting each element in a specific order.
+Insert: Adding new elements at a specific index.
+Delete: Removing elemnts at a specific index.
+Search: Finding the index of an element.
+Sort: Arranging elements in specific order.",
+"type": &"dialogue"
+},
+"31": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "31",
+"next_id": "7",
+"next_id_after": "39",
+"notes": "",
+"parent_id": "29",
+"responses": PackedStringArray("31"),
+"tags": PackedStringArray(),
+"text": "Back to options",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Back to options",
+"type": &"response"
+},
+"32": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "33",
+"next_id_after": "39",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Time Complexity",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Time Complexity",
+"type": &"response"
+},
+"33": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"notes": "",
+"parent_id": "32",
+"tags": PackedStringArray(),
+"text": "We are going to focus on Bubble Sort and Binary Search in this tutorial.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "We are going to focus on Bubble Sort and Binary Search in this tutorial.",
+"type": &"dialogue"
+},
+"34": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "34",
+"next_id": "35",
+"notes": "",
+"parent_id": "32",
+"tags": PackedStringArray(),
+"text": "The time complexity of Binary Search is O log N. This is because the search space is halved with each iteration! This is very efficient!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The time complexity of Binary Search is O log N. This is because the search space is halved with each iteration! This is very efficient!",
+"type": &"dialogue"
+},
+"35": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "36",
+"notes": "",
+"parent_id": "32",
+"tags": PackedStringArray(),
+"text": "The time complexity of Bubble Sort is O(n^2). This is because it uses nested loops. The outer loop repeats until the array is sorted. the inner loop compares and swaps adjacent elements. For larger data sets, this is not the most efficient algorithm to use!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The time complexity of Bubble Sort is O(n^2). This is because it uses nested loops. The outer loop repeats until the array is sorted. the inner loop compares and swaps adjacent elements. For larger data sets, this is not the most efficient algorithm to use!",
+"type": &"dialogue"
+},
+"36": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "36",
+"next_id": "7",
+"next_id_after": "39",
+"notes": "",
+"parent_id": "32",
+"responses": PackedStringArray("36"),
+"tags": PackedStringArray(),
+"text": "Back to options",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Back to options",
+"type": &"response"
+},
+"37": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "37",
+"next_id": "end",
+"next_id_after": "39",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "End the conversation",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "End the conversation",
+"type": &"response"
+},
+"39": {
+"id": "39",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"4": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I will tell you some information but remember, if you get stuck there are a lot of resources on the web that go into further detail!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I will tell you some information but remember, if you get stuck there are a lot of resources on the web that go into further detail!",
+"type": &"dialogue"
+},
+"5": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Here are some choices.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Here are some choices.",
+"type": &"dialogue"
+},
+"6": {
+"id": "6",
+"next_id": "7",
+"text": "choices",
+"type": &"title"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"next_id_after": "39",
+"notes": "",
+"responses": PackedStringArray("7", "13", "29", "32", "37"),
+"tags": PackedStringArray(),
+"text": "What are Arrays?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What are Arrays?",
+"type": &"response"
+},
+"8": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "Arrays are data structures that hold multiple values and are stored in contigious memory locations.
+ Arrays use zero based indexing meaning the count starts at 0 instead of 1. They typically contain the same data type but not always.This can depend on the programming language syntax(p.s. look up Dynamic,Static, Strong and Fixed Typing).",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Arrays are data structures that hold multiple values and are stored in contigious memory locations.
+ Arrays use zero based indexing meaning the count starts at 0 instead of 1. They typically contain the same data type but not always.This can depend on the programming language syntax(p.s. look up Dynamic,Static, Strong and Fixed Typing).",
+"type": &"dialogue"
+},
+"9": {
+"character": "Nathan",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "Lets get back on track!
+Here is an example: my_array = [13,4,7,15,10].
+What is the element at index[2]?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lets get back on track!
+Here is an example: my_array = [13,4,7,15,10].
+What is the element at index[2]?",
+"type": &"dialogue"
+}
+}
+raw_text = "~ start
+
+Nathan: [[Hi|Hello]], Lets learn about Arrays!
+Nathan: I will tell you some information but remember, if you get stuck there are a lot of resources on the web that go into further detail!
+Nathan: Here are some choices. => choices
+~ choices
+- What are Arrays?
+	Nathan: Arrays are data structures that hold multiple values and are stored in contigious memory locations.\\n Arrays use zero based indexing meaning the count starts at 0 instead of 1. They typically contain the same data type but not always.This can depend on the programming language syntax(p.s. look up Dynamic,Static, Strong and Fixed Typing). 
+	Nathan: Lets get back on track!\\nHere is an example: my_array = [13,4,7,15,10].\\nWhat is the element at index[2]?
+	If you said 7 you're correct! This is because for the array [13,4,7,15,10], indexing would work like this; \\n my_array[0] = 13, my_array[1] = 4 and my_array[2] = 7 
+	...okay, I think you get the picture.
+	- Back to options => choices		
+- What are they used for?
+	Nathan: I'm glad you asked! \\n Arrays are useful for storing multiple values e.g a group of objects.\\nThey help to organise data e.g matrices for mathematical operations or even implementing other data structures like stacks or queues!\\nArrays are great for efficient data access e.g. indexing or iterating through the array.
+	Nathan: I think you can agree that Arrays are an important data structure right?\\nIf I haven't convinced you yet, why don't I tell you how they are used in everyday life?
+	Nathan: Let's look at 3 ways arrays can be used. Gaming, Data analysis and Web Development. Click one of the options to see how they are used in these fields.
+	- Game Development
+		Nathan: I'm sure you've played a game where just can't reach the final boss level, right?\\nWell, those levels use arrays to store level data for example the layout, enemy placement and collectible items!
+		Nathan: How about when those pesky enemies spawn out of nowhere?...The enemy positions are held in arrays as x,y coordinates.
+		Nathan: Arrays also handle player inventory, for example when a character collects items. => choices
+	- Data Analysis
+		Nathan: Imagine you have a large file of data and you need to search for one thing,that could take you hours, days, wEeKs, YEARS....sorry....The point is, you need an efficient way to handle this data and this is where arrays come in.
+		Nathan: By storing information in an array, you can analyse and manipulate the data more efficiently.
+		Nathan: Arrays are also used in performing calculations on multiple values simultaneously and generating charts, graphs and other visualisations. => choices 
+	- Web Development
+		Nathan: Arrays are used to generate dynamic content on a web page e.g. lists and tables. They can help to manage user data e.g user information, preferences or shopping cart items.
+		Nathan: They can also be used to handle form data by storing multiple values from user input through a form. => choices
+	- Back to options => choices
+- Array Operations
+	Nathan: Common operations peformed on arrays include:\\nTraversal: Visiting each element in a specific order.\\nInsert: Adding new elements at a specific index.\\nDelete: Removing elemnts at a specific index.\\nSearch: Finding the index of an element.\\nSort: Arranging elements in specific order. 	
+	- Back to options => choices
+- Time Complexity
+	Nathan: We are going to focus on Bubble Sort and Binary Search in this tutorial.
+	Nathan: The time complexity of Binary Search is O log N. This is because the search space is halved with each iteration! This is very efficient!
+	Nathan: The time complexity of Bubble Sort is O(n^2). This is because it uses nested loops. The outer loop repeats until the array is sorted. the inner loop compares and swaps adjacent elements. For larger data sets, this is not the most efficient algorithm to use!
+	- Back to options => choices	
+- End the conversation => END
+
+=> END"
+metadata/dialogue_manager_version = "2.41.4"
