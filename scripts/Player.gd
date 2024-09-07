@@ -6,18 +6,12 @@ const speed = 130.0
 const JUMP_VELOCITY = -300.0
 
 @onready var b_search_label = $"../BinarySearchPcode/BSearchLabel"
-#@onready var label = $"../BubbleSortPcode/Label"
 @onready var visualizer: Window = $"../visualize/Visualizer"
 @onready var animated_sprite = $AnimatedSprite2D
 var player_state
 
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
-	#if is_instance_valid(label): 
-		#print("Label is valid. Hiding label.")
-		#label.hide() # would not work without the print statements. I'm afraid to change it :'(
-	#else:
-		#print("Label is NOT valid.")
 	
 	if is_instance_valid(b_search_label):
 		print("Binary Search Label is valid. Hiding label.")
@@ -57,17 +51,25 @@ func player():
 	pass
 	
 
-#func _on_area_2d_body_entered(body):
-	#label.show()
-#
-#
-#func _on_area_2d_body_exited(body):
-	#label.hide()
-
-
 func _on_binary_search_pcode_body_entered(body):
 	visualizer.show() 
 
 
 func _on_binary_search_pcode_body_exited(body):
 	visualizer.hide()
+
+
+
+
+
+
+
+
+
+
+
+	#if is_instance_valid(label): 
+		#print("Label is valid. Hiding label.")
+		#label.hide() # would not work without the print statements. I'm afraid to change it :'(
+	#else:
+		#print("Label is NOT valid.")
