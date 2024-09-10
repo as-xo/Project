@@ -10,6 +10,10 @@ extends Window
 var array = [5, 3, 8, 4, 2]
 var array_labels = []
 
+func _on_visibility_changed():
+	if visualizer.is_visible():
+		visualizer.hide()
+
 func _ready():
 	# Initialize the visual representation of the array
 	_create_visual_array()

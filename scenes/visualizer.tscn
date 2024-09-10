@@ -4,6 +4,7 @@
 
 [node name="Visualizer" type="Window"]
 size = Vector2i(520, 270)
+visible = false
 script = ExtResource("1_vl812")
 
 [node name="ColorRect" type="ColorRect" parent="."]

@@ -10,7 +10,8 @@ License: [MIT License](LICENSE.txt)
 #### Godot
 Author: [Juan Linietsky, Ariel Manzur, and contributors](https://godotengine.org/contact)  
 Source: [godotengine.org](https://godotengine.org/)  
-License: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt) 
+License: [MIT License](https://github.com/godotengine/godot/blob/master/LICENSE.txt)
+ 
 
 #### Visual Studio Code
 Author: [Microsoft](https://opensource.microsoft.com/)  

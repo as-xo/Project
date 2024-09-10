@@ -3801,17 +3801,6 @@ zoom = Vector2(1.5, 1.5)
 [node name="Player" parent="." instance=ExtResource("3_upshi")]
 position = Vector2(-247, -99)
 
-[node name="visualize" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="visualize"]
-visible = false
-position = Vector2(329.125, -179.125)
-shape = SubResource("RectangleShape2D_0cqgk")
-
-[node name="Visualizer" parent="visualize" instance=ExtResource("4_f8uwf")]
-position = Vector2i(0, 36)
-visible = false
-
 [node name="Characters" type="Node" parent="."]
 
 [node name="Nathan" parent="Characters" instance=ExtResource("4_fkbe0")]
@@ -3849,6 +3838,17 @@ spawn_direction = "left"
 
 [node name="spawn" parent="Doors/door_B" index="1"]
 position = Vector2(88, 8)
+
+[node name="visualize" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="visualize"]
+visible = false
+position = Vector2(329.125, -179.125)
+shape = SubResource("RectangleShape2D_0cqgk")
+
+[node name="Visualizer" parent="visualize" instance=ExtResource("4_f8uwf")]
+position = Vector2i(0, 36)
 
 [connection signal="body_entered" from="visualize" to="Player" method="_on_binary_search_pcode_body_entered"]
 [connection signal="body_exited" from="visualize" to="Player" method="_on_binary_search_pcode_body_exited"]

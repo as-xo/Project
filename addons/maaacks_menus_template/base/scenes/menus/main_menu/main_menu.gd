@@ -21,7 +21,10 @@ func load_scene(scene_path : String):
 	SceneLoader.load_scene(scene_path)
 
 func play_game():
-	SceneLoader.load_scene(game_scene_path)
+	get_tree().change_scene_to_file(game_scene_path)
+	#SceneLoader.load_scene("res://path_to_your_scene.tscn", true) # display loading screen
+	#await get_tree().create_timer(2.0).timeout  # 2 second delay
+	#SceneLoader.load_scene("res://path_to_your_scene.tscn", true)
 
 
 func _open_sub_menu(menu : Control):
@@ -91,7 +94,8 @@ func _ready():
 	_setup_options()
 	_setup_credits()
 	_setup_play()
-
+	
+	
 func _on_play_button_pressed():
 	play_game()
 
