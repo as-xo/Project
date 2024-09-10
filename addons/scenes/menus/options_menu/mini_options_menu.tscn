@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmstn8pjbubxs"]
+
+[ext_resource type="PackedScene" path="res://addons/maaacks_menus_template/base/scenes/menus/options_menu/mini_options_menu.tscn" id="1_teqrh"]
+[ext_resource type="Script" path="res://addons/scenes/menus/options_menu/mini_options_menu.gd" id="2_qsypu"]
+
+[node name="MiniOptionsMenu" instance=ExtResource("1_teqrh")]
+script = ExtResource("2_qsypu")
