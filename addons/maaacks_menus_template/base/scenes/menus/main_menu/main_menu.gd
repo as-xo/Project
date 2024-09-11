@@ -4,7 +4,7 @@ extends Control
 const NO_VERSION_NAME : String = "0.0.0"
 
 ## Defines the path to the game scene. Hides the play button if empty.
-@export var game_scene_path: String = "C:/Users/anita/Desktop/pls/Project/scenes/main.tscn"
+@export var game_scene_path: String = "res://scenes/main.tscn"
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
 @export_group("Version")

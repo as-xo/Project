@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://caoaa60s6ty0s"]
+
+[ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_menus_template/base/scenes/credits/credits.tscn" id="1_23ofp"]
+
+[node name="Credits" instance=ExtResource("1_23ofp")]

@@ -18,6 +18,8 @@ func _ready():
 		b_search_label.hide()
 	else:
 		print("Binary Search Label is NOT valid.")	
+		
+	visualizer.hide()	
 
 	
 func _on_spawn(position: Vector2, direction: String):

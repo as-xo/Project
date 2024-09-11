@@ -10,11 +10,20 @@ extends Window
 var array = [5, 3, 8, 4, 2]
 var array_labels = []
 
-func _on_visibility_changed():
-	if visualizer.is_visible():
-		visualizer.hide()
 
 func _ready():
+	print("Debug: _ready() called")
+	
+	if visualizer:
+		print("Debug: visualizer node found")
+	else:
+		print("Debug: visualizer node not found")
+	
+	# Hide visualizer
+	visualizer.hide()
+	print("Debug: visualizer.hide() called. Is visible: ", visualizer.visible)
+	
+	
 	# Initialize the visual representation of the array
 	_create_visual_array()
 	start_button.add_item("Choose option")

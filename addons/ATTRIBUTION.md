@@ -4,7 +4,7 @@
 ## THANK YOU!
 ### Please Fill Out The Post Game Survey<3
 
-### Devloper
+### Developer
 ## Anita Mpofu
 
 
